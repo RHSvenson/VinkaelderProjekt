@@ -22,3 +22,15 @@ C:\Users\danie\Desktop\Coding\C#\DVI_Monitor_Test\DVI_Monitor\obj\Debug\TestProj
 C:\Users\danie\Desktop\Coding\C#\DVI_Monitor_Test\DVI_Monitor\obj\Debug\TestProject.csproj.CoreCompileInputs.cache
 C:\Users\danie\Desktop\Coding\C#\DVI_Monitor_Test\DVI_Monitor\obj\Debug\TestProject.exe
 C:\Users\danie\Desktop\Coding\C#\DVI_Monitor_Test\DVI_Monitor\obj\Debug\TestProject.pdb
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\bin\Debug\TestProject.exe.config
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\bin\Debug\TestProject.exe
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\bin\Debug\TestProject.pdb
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\obj\Debug\TestProject.csproj.AssemblyReference.cache
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\obj\Debug\TestProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\obj\Debug\TestProject.DVI_Monitor.resources
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\obj\Debug\TestProject.Properties.Resources.resources
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\obj\Debug\TestProject.csproj.GenerateResource.cache
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\obj\Debug\TestProject.csproj.CoreCompileInputs.cache
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\obj\Debug\TestProject.exe
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\obj\Debug\TestProject.pdb
+C:\Users\danie\Desktop\CodeProjects\VinkaelderProjekt\DVI_Monitor\DVI_Monitor\obj\Debug\TestProject.clockEditor.resources

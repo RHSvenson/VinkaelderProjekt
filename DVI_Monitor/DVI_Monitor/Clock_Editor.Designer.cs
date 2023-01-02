@@ -30,8 +30,8 @@
         {
             this.currClocks = new System.Windows.Forms.ListBox();
             this.possibleClocks = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.addClock = new System.Windows.Forms.Button();
+            this.rmvClock = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -52,25 +52,25 @@
             this.possibleClocks.Size = new System.Drawing.Size(224, 186);
             this.possibleClocks.TabIndex = 2;
             // 
-            // button1
+            // addClock
             // 
-            this.button1.Location = new System.Drawing.Point(231, 29);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "<==";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.addClock.Location = new System.Drawing.Point(231, 29);
+            this.addClock.Name = "addClock";
+            this.addClock.Size = new System.Drawing.Size(75, 23);
+            this.addClock.TabIndex = 3;
+            this.addClock.Text = "<==";
+            this.addClock.UseVisualStyleBackColor = true;
+            this.addClock.Click += new System.EventHandler(this.addClock_Click);
             // 
-            // button2
+            // rmvClock
             // 
-            this.button2.Location = new System.Drawing.Point(230, 192);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "==>";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.rmvClock.Location = new System.Drawing.Point(230, 192);
+            this.rmvClock.Name = "rmvClock";
+            this.rmvClock.Size = new System.Drawing.Size(75, 23);
+            this.rmvClock.TabIndex = 4;
+            this.rmvClock.Text = "==>";
+            this.rmvClock.UseVisualStyleBackColor = true;
+            this.rmvClock.Click += new System.EventHandler(this.rmvClock_Click);
             // 
             // label1
             // 
@@ -97,14 +97,13 @@
             this.ClientSize = new System.Drawing.Size(547, 229);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.rmvClock);
+            this.Controls.Add(this.addClock);
             this.Controls.Add(this.possibleClocks);
             this.Controls.Add(this.currClocks);
             this.Name = "clockEditor";
             this.Text = "Clock Editor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
-            this.Load += new System.EventHandler(this.clockEditor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,8 +113,8 @@
 
         private System.Windows.Forms.ListBox currClocks;
         private System.Windows.Forms.ListBox possibleClocks;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button addClock;
+        private System.Windows.Forms.Button rmvClock;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

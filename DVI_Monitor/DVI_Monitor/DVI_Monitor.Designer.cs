@@ -279,7 +279,7 @@
             this.clockList.FormattingEnabled = true;
             this.clockList.Location = new System.Drawing.Point(3, 3);
             this.clockList.Name = "clockList";
-            this.clockList.Size = new System.Drawing.Size(162, 156);
+            this.clockList.Size = new System.Drawing.Size(367, 156);
             this.clockList.TabIndex = 11;
             // 
             // clockListPanel
@@ -288,12 +288,12 @@
             this.clockListPanel.Controls.Add(this.clockList);
             this.clockListPanel.Location = new System.Drawing.Point(13, 226);
             this.clockListPanel.Name = "clockListPanel";
-            this.clockListPanel.Size = new System.Drawing.Size(170, 170);
+            this.clockListPanel.Size = new System.Drawing.Size(375, 170);
             this.clockListPanel.TabIndex = 12;
             // 
             // clockEdit
             // 
-            this.clockEdit.Location = new System.Drawing.Point(190, 226);
+            this.clockEdit.Location = new System.Drawing.Point(394, 226);
             this.clockEdit.Name = "clockEdit";
             this.clockEdit.Size = new System.Drawing.Size(75, 23);
             this.clockEdit.TabIndex = 13;
