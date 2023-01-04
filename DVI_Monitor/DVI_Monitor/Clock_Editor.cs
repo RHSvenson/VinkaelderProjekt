@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace TestProject
@@ -8,37 +6,46 @@ namespace TestProject
 
     public partial class clockEditor : Form
     {
-        public ListBox.ObjectCollection currentClocks = new ListBox.ObjectCollection(new ListBox());
+        public string Clock1_Selection;
+        public string Clock2_Selection;
+        public string Clock3_Selection;
+
         public clockEditor()
         {
             InitializeComponent();
+
+            //Placeholder for no selected clocks
+            Clock1_Select.Items.Add("None");
+            Clock2_Select.Items.Add("None");
+            Clock3_Select.Items.Add("None");
+
+            Clock1_Select.SelectedIndex = 0;
+            Clock2_Select.SelectedIndex = 0;
+            Clock3_Select.SelectedIndex = 0;
+
+            //Get system timezones
             foreach (TimeZoneInfo timeZones in TimeZoneInfo.GetSystemTimeZones())
             {
-                possibleClocks.Items.Add(timeZones.Id);
+                Clock1_Select.Items.Add(timeZones.Id);
+                Clock2_Select.Items.Add(timeZones.Id);
+                Clock3_Select.Items.Add(timeZones.Id);
             }
         }
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
+            //Hide window instead of closing it to preserve data
             Hide();
+
+            //cancels the close event
             e.Cancel = true;
         }
-        private void addClock_Click(object sender, EventArgs e)
-        {
-            currClocks.Items.Add(possibleClocks.Items[possibleClocks.SelectedIndex]);
-            possibleClocks.Items.RemoveAt(possibleClocks.SelectedIndex);
-            updClckLst();
-        }
 
-        private void rmvClock_Click(object sender, EventArgs e)
+        public void updClckLst(object sender, EventArgs e)
         {
-            possibleClocks.Items.Add(currClocks.Items[currClocks.SelectedIndex]);
-            currClocks.Items.RemoveAt(currClocks.SelectedIndex);
-            updClckLst();
-        }
-        public void updClckLst()
-        {
-            currentClocks.Clear();
-            currentClocks.AddRange(currClocks.Items);
+            //update public strings to match current clock selections
+            if (Clock1_Select.SelectedIndex != -1) { Clock1_Selection = Clock1_Select.Items[Clock1_Select.SelectedIndex].ToString(); }
+            if (Clock2_Select.SelectedIndex != -1) { Clock2_Selection = Clock2_Select.Items[Clock2_Select.SelectedIndex].ToString(); }
+            if (Clock3_Select.SelectedIndex != -1) { Clock3_Selection = Clock3_Select.Items[Clock3_Select.SelectedIndex].ToString(); }
         }
 
     }

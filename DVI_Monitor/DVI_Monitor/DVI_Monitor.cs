@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Windows.Forms;
 using Timer = System.Timers.Timer;
 
@@ -18,6 +17,7 @@ namespace TestProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //Setting up timers to call functions on elapse and then starting them
             stockTimer.Elapsed += UpdateInfo;
             UpdateInfo(null, null);
             stockTimer.Start();
@@ -28,24 +28,31 @@ namespace TestProject
 
         private void UpdateClocks(object sender, System.Timers.ElapsedEventArgs e)
         {
+            DateTime currTime = DateTime.UtcNow;
+
+            //Update clock text
             this.BeginInvoke((MethodInvoker)delegate ()
             {
-                DateTime currTime = DateTime.UtcNow;
-                if (clockCfg.currentClocks.Count != clockList.Items.Count)
+                Clock1_Name.Text = clockCfg.Clock1_Selection;
+                if (clockCfg.Clock1_Selection != "None") 
                 {
-                    clockList.Items.Clear();
-                    foreach (string timezone in clockCfg.currentClocks)
-                    {
-                        clockList.Items.Add(getTimeString(currTime, timezone));
-                    }
-                }
-                else
+                    Clock1_Time.Text = getTimeString(currTime, clockCfg.Clock1_Selection);
+                } 
+                else { Clock1_Time.Text = "-"; }
+
+                Clock2_Name.Text = clockCfg.Clock2_Selection;
+                if (clockCfg.Clock2_Selection != "None")
                 {
-                    for (int i = 0; i < clockCfg.currentClocks.Count; i++)
-                    {
-                        clockList.Items[i] = getTimeString(currTime, clockCfg.currentClocks[i].ToString());
-                    }
+                    Clock2_Time.Text = getTimeString(currTime, clockCfg.Clock2_Selection);
                 }
+                else { Clock2_Time.Text = "-"; }
+
+                Clock3_Name.Text = clockCfg.Clock3_Selection;
+                if (clockCfg.Clock3_Selection != "None")
+                {
+                    Clock3_Time.Text = getTimeString(currTime, clockCfg.Clock3_Selection);
+                }
+                else { Clock3_Time.Text = "-"; }
             });
         }
 
@@ -54,7 +61,7 @@ namespace TestProject
             //format time information given the current utc time and a timeZoneID
             DateTime localizedClock = TimeZoneInfo.ConvertTimeBySystemTimeZoneId(currUtcTime, timeZoneID);
 
-            return $"{timeZoneID}: {localizedClock.DayOfWeek} {localizedClock.ToShortDateString()} - {localizedClock.TimeOfDay.ToString("hh\\:mm\\:ss")}";
+            return $"{localizedClock.DayOfWeek} {localizedClock.ToShortDateString()} - {localizedClock.TimeOfDay.ToString("hh\\:mm\\:ss")}";
         }
 
         private void UpdateInfo(object sender, EventArgs e)
@@ -94,8 +101,9 @@ namespace TestProject
             });
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void editClock(object sender, EventArgs e)
         {
+            //display clock editing window
             clockCfg.Show();
         }
     }

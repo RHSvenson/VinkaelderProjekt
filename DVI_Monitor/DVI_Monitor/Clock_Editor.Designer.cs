@@ -28,79 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.currClocks = new System.Windows.Forms.ListBox();
-            this.possibleClocks = new System.Windows.Forms.ListBox();
-            this.addClock = new System.Windows.Forms.Button();
-            this.rmvClock = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.Clock1_Select = new System.Windows.Forms.ComboBox();
+            this.Clock2_Select = new System.Windows.Forms.ComboBox();
+            this.Clock3_Select = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // currClocks
+            // button1
             // 
-            this.currClocks.FormattingEnabled = true;
-            this.currClocks.Location = new System.Drawing.Point(12, 29);
-            this.currClocks.Name = "currClocks";
-            this.currClocks.Size = new System.Drawing.Size(212, 186);
-            this.currClocks.TabIndex = 1;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(13, 190);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 27);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Close";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // possibleClocks
+            // Clock1_Select
             // 
-            this.possibleClocks.FormattingEnabled = true;
-            this.possibleClocks.Location = new System.Drawing.Point(311, 29);
-            this.possibleClocks.Name = "possibleClocks";
-            this.possibleClocks.Size = new System.Drawing.Size(224, 186);
-            this.possibleClocks.TabIndex = 2;
+            this.Clock1_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock1_Select.FormattingEnabled = true;
+            this.Clock1_Select.Location = new System.Drawing.Point(12, 34);
+            this.Clock1_Select.Name = "Clock1_Select";
+            this.Clock1_Select.Size = new System.Drawing.Size(141, 24);
+            this.Clock1_Select.TabIndex = 1;
+            this.Clock1_Select.SelectedIndexChanged += new System.EventHandler(this.updClckLst);
             // 
-            // addClock
+            // Clock2_Select
             // 
-            this.addClock.Location = new System.Drawing.Point(231, 29);
-            this.addClock.Name = "addClock";
-            this.addClock.Size = new System.Drawing.Size(75, 23);
-            this.addClock.TabIndex = 3;
-            this.addClock.Text = "<==";
-            this.addClock.UseVisualStyleBackColor = true;
-            this.addClock.Click += new System.EventHandler(this.addClock_Click);
+            this.Clock2_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock2_Select.FormattingEnabled = true;
+            this.Clock2_Select.Items.AddRange(new object[] {
+            "None"});
+            this.Clock2_Select.Location = new System.Drawing.Point(159, 34);
+            this.Clock2_Select.Name = "Clock2_Select";
+            this.Clock2_Select.Size = new System.Drawing.Size(141, 24);
+            this.Clock2_Select.TabIndex = 2;
+            this.Clock2_Select.SelectedIndexChanged += new System.EventHandler(this.updClckLst);
             // 
-            // rmvClock
+            // Clock3_Select
             // 
-            this.rmvClock.Location = new System.Drawing.Point(230, 192);
-            this.rmvClock.Name = "rmvClock";
-            this.rmvClock.Size = new System.Drawing.Size(75, 23);
-            this.rmvClock.TabIndex = 4;
-            this.rmvClock.Text = "==>";
-            this.rmvClock.UseVisualStyleBackColor = true;
-            this.rmvClock.Click += new System.EventHandler(this.rmvClock_Click);
+            this.Clock3_Select.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock3_Select.FormattingEnabled = true;
+            this.Clock3_Select.Location = new System.Drawing.Point(306, 34);
+            this.Clock3_Select.Name = "Clock3_Select";
+            this.Clock3_Select.Size = new System.Drawing.Size(141, 24);
+            this.Clock3_Select.TabIndex = 3;
+            this.Clock3_Select.SelectedIndexChanged += new System.EventHandler(this.updClckLst);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 10);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(8, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "label1";
+            this.label1.Size = new System.Drawing.Size(68, 20);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Clock 1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(311, 9);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(155, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Clock 2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(302, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 20);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Clock 3";
             // 
             // clockEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 229);
+            this.ClientSize = new System.Drawing.Size(465, 229);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.rmvClock);
-            this.Controls.Add(this.addClock);
-            this.Controls.Add(this.possibleClocks);
-            this.Controls.Add(this.currClocks);
+            this.Controls.Add(this.Clock3_Select);
+            this.Controls.Add(this.Clock2_Select);
+            this.Controls.Add(this.Clock1_Select);
+            this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "clockEditor";
             this.Text = "Clock Editor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
@@ -111,11 +134,12 @@
 
         #endregion
 
-        private System.Windows.Forms.ListBox currClocks;
-        private System.Windows.Forms.ListBox possibleClocks;
-        private System.Windows.Forms.Button addClock;
-        private System.Windows.Forms.Button rmvClock;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox Clock1_Select;
+        private System.Windows.Forms.ComboBox Clock2_Select;
+        private System.Windows.Forms.ComboBox Clock3_Select;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
